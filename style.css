@@ -1,0 +1,136 @@
+:root {
+  --color-dark: #000;
+  --color-dark-primary: #101010;
+  --color-dark-1: #1d1d1d;
+  --color-dark-2: #121212;
+  --color-grey: #a7a7a7;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  grid-template-rows: 70px 1fr;
+  height: 100vh;
+  width: 100%;
+}
+
+.nav {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background: var(--color-dark-primary);
+}
+
+.main {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background: linear-gradient(var(--color-dark-1), var(--color-dark-2));
+}
+
+/* Left Pane */
+.left-pane {
+  position: relative;
+  grid-column: 1/2;
+  grid-row: span 2;
+  background: var(--color-dark);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-grey);
+}
+
+.logo {
+  height: 50px;
+  align-self: flex-start;
+  margin-bottom: 3rem;
+}
+
+.active {
+  color: white;
+}
+
+.menu-items,
+.menu-items2 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.menu-item,
+.menu-item2,
+.menu-item3 {
+  transition: 0.3s ease-in-out;
+}
+
+.menu-item:hover,
+.menu-item2:hover {
+  color: white;
+}
+
+.menu-item3:hover {
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.menu__icon {
+  font-size: 2.2rem;
+}
+
+.menu__text {
+  margin-left: 2rem;
+}
+
+.menu-items3 {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.plus__icon {
+  color: black;
+  background: var(--color-grey);
+  border-radius: 2px;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.liked__icon {
+  color: var(--color-grey);
+  background: rgb(54, 18, 170);
+  background: linear-gradient(
+    120deg,
+    rgba(54, 18, 170, 1) 0%,
+    rgba(133, 159, 153, 1) 100%
+  );
+  border-radius: 2px;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+}
