@@ -11,7 +11,9 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -246,10 +248,31 @@ a {
 }
 
 .card {
+  position: relative;
   background: var(--color-dark-primary);
   border-radius: 1rem;
   padding: 1.5rem;
   transition: background 0.2s ease-in-out;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.card-list .card .play-button {
+  font-size: 5rem;
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  color: #1bd760;
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
 }
 
 .card__image {
@@ -273,6 +296,11 @@ a {
 
 .card:hover {
   background: rgba(50, 50, 50, 0.5);
+}
+
+.card:hover .play-button {
+  opacity: 1;
+  top: 40%;
 }
 
 /* footer */
@@ -317,12 +345,11 @@ a {
 
 .sitemap__social-links {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   color: white;
 }
 
 .sitemap__social-links li {
-  display: block;
   position: relative;
   height: 4rem;
   width: 4rem;
@@ -358,7 +385,6 @@ a {
 }
 
 .links-content__link {
-  color: var(--color-grey);
   transition: all 0.3s ease-in-out;
 }
 
