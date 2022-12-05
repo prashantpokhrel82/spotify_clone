@@ -329,6 +329,7 @@ a {
   background: rgba(50, 50, 50);
   border-radius: 50%;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .sitemap__social-link {
@@ -337,6 +338,11 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.sitemap__social-links li:hover {
+  background: rgba(100, 100, 100);
+  cursor: pointer;
 }
 
 .links-content {
@@ -351,11 +357,12 @@ a {
   font-size: 1.4rem;
 }
 
-.links-content__links .links-content__link {
+.links-content__link {
+  color: var(--color-grey);
   transition: all 0.3s ease-in-out;
 }
 
-.links-content__links .links-content__link:hover {
+.links-content__link:hover {
   color: white;
   border-bottom: 1px solid white;
 }
